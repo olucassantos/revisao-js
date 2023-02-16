@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>String</title>
+    </head>
+
+    <body>
+        <h1>Trabalhando com strings</h1>
+
+        <script type="text/javascript">
+            var nome = "Cleitin da Massa";
+            console.log(nome);
+
+            // Retornar o comprimento da string
+            console.log(nome.length);
+
+            // Retorna um caractere da string
+            console.log(nome[0]);
+
+            // Retorna a posição da string pesquisada
+            console.log(nome.indexOf('Massa'))
+
+            // Retorna -1 por não encontrar Maria
+            console.log(nome.indexOf('Maria'))
+
+            // Retorna uma fatia da string
+            console.log(nome.slice(0, 3))
+            
+            // Retorna uma fatia da string de traz pra frente
+            console.log(nome.slice(5, -1))
+
+            // Retorna todos os caracteres a partir do segundo
+            console.log(nome.slice(2))
+
+            // Retorna a string em caixa alta
+            console.log(nome.toUpperCase())
+
+            // Retorna a string em caixa baixa
+            console.log(nome.toLowerCase())
+
+            // Substitui valores da string e retorna o resultado
+            console.log(nome.replace('Massa', 'Galera'));
+        </script>
+    </body>
+</html>

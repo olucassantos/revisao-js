@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Jquery</title>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+        <style>
+            .verde{
+                color: green;
+            }
+
+            .lista{
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            // Espera o carregamento da página e executa o código
+            $(function(){
+                // Seleciona os elementos da class titulo e adiciona uma class 'verde'
+                $('.titulo').addClass('verde')
+
+                // $('h1, h2')
+
+                // Cria um ouvinte para o evento click no button#addItem
+                $('#addItem').on('click', function() {
+                    let textoItem = $('#campo').val();
+                    
+                    // Caso não exista texto retorna sem executar
+                    if(textoItem.length == 0)
+                        return;
+
+                    // "cria" um elemento li
+                    let li = "<li>"+ textoItem +"</li>";
+                    
+                    // Anexa dentro do elemento 'lista' um conteudo
+                    $('.lista').append(li);
+
+                    // Limpa o campo de texto
+                    $('#campo').val('');
+
+                    // Foca no campo de texto
+                    $('#campo').focus();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 class="titulo">Minha Lista de Itens</h1>
+        <ul class="lista">
+            
+        </ul>
+
+        <input type="text" id="campo" value="">
+        <button id="addItem">Adicionar Item</button>
+    </body>
+</html>
